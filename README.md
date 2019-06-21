@@ -1,17 +1,18 @@
-# To-Do List
+# Pizza Order System on Web
 
-#### to-do list display program. 6/21/2019
+#### Ordering Pizza on Website program. 6/21/2019
 
 #### By **Tae Lee**
 
 ## Description
 
-Webpage that displays a list of to-do items at the users will
+Webpage that operates pizza order by size and topping choice.
 
 ### Specs
 | Spec.                                                                    | Input                       | Output                                           |
 | :----------------------------------------------------------------------- | :-------------------------- | :----------------------------------------------- |
-| we make a Task constructor and it will output the data held              | testTask                    | "Go to the Bank", when: "Thursday"~~~            |
+| design pizza object with topping and size properties                     |                             |                                                  |
+
 |                                                                          |                             |                                                  |
 | we make a basic prototype to tell if a task was completed                | testTask.completed()        | "go to the bank was completed on Thursday "      |
 | on click of Task name, we display all objects properties                 | click on Display Tasks      | Display all Tasks                                |
