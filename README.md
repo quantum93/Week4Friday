@@ -15,7 +15,8 @@ Webpage that operates pizza order by size and topping choice.
 | add price logic in prototype                                             |                             |                                                  |
 | add price logic for size and topping choice in prototype                 |                             |                                                  |
 | make a html page for basic pizza order system                            |                             |                                                  |
- 
+| display the choice of size and topping in html but not work for price    | click size & topping        | display size and topping in html                 |
+
 
 
 ## Setup/Installation Requirements
