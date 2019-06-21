@@ -1,3 +1,43 @@
-#show-contact, #show-b, #show-m {
+h1 {
+  background-image: url("../img/pizza.jpg");
+  background-size: cover;
+  font-weight: bold;
+  font-style: oblique;
+  text-align: center;
+}
+
+.display {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-weight: bolder;
+}
+
+h2 {
+  text-align: center;
+}
+
+.hidden {
   display: none;
 }
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* media part should be always the end of styles.css in order to work well with other css actions. */
+@media screen and (min-width: 768px) {
+  .column {
+    width: 300px;
+    float: left;
+    padding: 20px;
+  }

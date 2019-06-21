@@ -32,7 +32,7 @@ $(document).ready(function() {
     var pizza = new Pizza(size, topping);
     var price = pizza.yourPrice();
 
-    $("#show-task").show();
+    $(".hidden").show();
     $(".size").text(size);
     $(".topping").text(topping);
     $(".price").text(price);
