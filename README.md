@@ -19,7 +19,9 @@ Webpage that operates pizza order by size and topping choice.
 | display the result of price calculation on html                          | click order (medium, artichoke) | medium, artichoke, 10                            |
 | make simpler logic for price calculation                                 | click order (medium, artichoke) | medium, artichoke, 13                            |
 | some css style jobs                                                      |                                 |                                                  |
-
+| add topping price variation with key-value                               | click order (medium, pepperoni) | medium, pepperoni, 19.5                          |
+| add multiple choice of topping                                           | click order (medium, cheese, pepperoni) | medium, cheese, pepperoni, 19.5          |
+| add a logic of price with different number of topping choice             | 
 |                                |                                 |                                                  |
 
 
