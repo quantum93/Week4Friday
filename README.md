@@ -13,7 +13,7 @@ Webpage that operates pizza order by size and topping choice.
 | :----------------------------------------------------------------------- | :-------------------------- | :----------------------------------------------- |
 | design pizza object with topping and size properties                     |                             |                                                  |
 | add price logic in prototype                                             |                             |                                                  |
-
+| add price logic for size and topping choice in prototype                 |                             |                                                  |
 |                                                                          |                             |                                                  |
 
 
