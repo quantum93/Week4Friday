@@ -23,8 +23,9 @@ Webpage that operates pizza order by size and topping choice.
 | add multiple choice of topping                                           | medium, cheese, pepperoni       | medium, cheese, pepperoni, 19.5                  |
 | add a logic of price with different number of topping choice             | medium, cheese, pepperoni       | medium, cheese, pepperoni, 16                    |
 | add a logic of price with different number of topping choice             | medium, cheese      | medium, cheese, You didn't choose the second topping, 13     |
-| polishing order summary message                                           | medium, cheese | Your order details: Your pizza is small size with cheese and artichoke ~ | 
-|   
+| polishing order summary message                                          | medium, cheese | Your order details: Your pizza is small size with cheese and artichoke ~ |
+| make a click to store multiple pizza order              |                                 |                |
+|
 
 
 
