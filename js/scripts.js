@@ -46,12 +46,12 @@ $(document).ready(function() {
     var price = pizza.yourPrice();
 
     $(".hidden").show();
-    $(".size").text(size);
-    $(".topping1").text(topping1);
+    $(".order").append("Your pizza is " + size + " size " );
+    $(".order").append("with " + topping1);
     if (topping2 === "") {
-        $(".topping2").text("You didn't choose a second topping.");
+        $(".order").append(" and you didn't choose a second topping.");
     } else {
-      $(".topping2").text(topping2);
+      $(".order").append(" and " + topping2);
     }
     $(".price").text(price);
   });
