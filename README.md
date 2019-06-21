@@ -12,13 +12,10 @@ Webpage that operates pizza order by size and topping choice.
 | Spec.                                                                    | Input                       | Output                                           |
 | :----------------------------------------------------------------------- | :-------------------------- | :----------------------------------------------- |
 | design pizza object with topping and size properties                     |                             |                                                  |
+| add price logic in prototype                                             |                             |                                                  |
 
 |                                                                          |                             |                                                  |
-| we make a basic prototype to tell if a task was completed                | testTask.completed()        | "go to the bank was completed on Thursday "      |
-| on click of Task name, we display all objects properties                 | click on Display Tasks      | Display all Tasks                                |
-| We take multiple inputs as a variable, and then add it in constructor    | go to bank, thursday, downtown portland, with mom| Task1: "go to bank", "Thursday", "downtown Portland", "with mom"|
-| Without reading homework of monday, it is impossible to do more....      |              
-| Read Monday homework pages before doing display of resuts!               |  
+
 
 ## Setup/Installation Requirements
 
