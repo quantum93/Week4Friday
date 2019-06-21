@@ -9,13 +9,15 @@
 Webpage that operates pizza order by size and topping choice.
 
 ### Specs
-| Spec.                                                                    | Input                       | Output                                           |
-| :----------------------------------------------------------------------- | :-------------------------- | :----------------------------------------------- |
-| design pizza object with topping and size properties                     |                             |                                                  |
-| add price logic in prototype                                             |                             |                                                  |
-| add price logic for size and topping choice in prototype                 |                             |                                                  |
-| make a html page for basic pizza order system                            |                             |                                                  |
-| display the choice of size and topping in html but not work for price    | click size & topping        | display size and topping in html                 |
+| Spec.                                                                    | Input                           | Output                                           |
+| :----------------------------------------------------------------------- | :------------------------------ | :----------------------------------------------- |
+| design pizza object with topping and size properties                     |                                 |                                                  |
+| add price logic in prototype                                             |                                 |                                                  |
+| add price logic for size and topping choice in prototype                 |                                 |                                                  |
+| make a html page for basic pizza order system                            |                                 |                                                  |
+| display the choice of size and topping in html but not work for price    | click order                     | display size and topping in html                 |
+| display the result of price calculation on html                          | click order (medium, artichoke) | medium, artichoke, 10                            |
+| 
 
 
 

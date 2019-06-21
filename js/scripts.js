@@ -1,89 +1,45 @@
 // ------------------------------ business logic -------------------------------
-function Pizza(topping, size) {
-  this.topping = topping;
+function Pizza(size, topping) {
   this.size = size;
+  this.topping = topping;
 }
 
 Pizza.prototype.yourPrice = function() {
   var price, sizePrice;
   price = sizePrice = 10; //basic price of all kinds of pizza
-
+  console.log(sizePrice);
+  console.log(price);
   if (this.size === 'small') {
     price = price - (sizePrice - (sizePrice*0.7))
-    if (this.topping === 'cheese' || this.topping === 'pepperoni' || this.topping === 'artichoke' || this.topping === 'anchovy') {
-      price = price + ((sizePrice*1.1) - sizePrice)
-    }
-    if (this.topping === 'cheese' && (this.topping === 'pepperoni' || this.topping === 'artichoke' || this.topping === 'anchovy')) {
-      price = price + ((sizePrice*1.2) - sizePrice)
-    }
-    if (this.topping === 'cheese' && this.topping === 'pepperoni' && (this.topping === 'artichoke' || this.topping === 'anchovy')) {
-      price = price + ((sizePrice*1.3) - sizePrice)
-    }
-    if (this.topping === 'cheese' && this.topping === 'pepperoni' && this.topping === 'artichoke' && this.topping === 'anchovy') {
-      price = price + ((sizePrice*1.4) - sizePrice)
-    }
-
-    if (this.size === 'medium') {
-      price = sizePrice
-      if (this.topping === 'cheese' || this.topping === 'pepperoni' || this.topping === 'artichoke' || this.topping === 'anchovy') {
-        price = price + ((sizePrice*1.1) - sizePrice)
-      }
-      if (this.topping === 'cheese' && (this.topping === 'pepperoni' || this.topping === 'artichoke' || this.topping === 'anchovy')) {
-        price = price + ((sizePrice*1.2) - sizePrice)
-      }
-      if (this.topping === 'cheese' && this.topping === 'pepperoni' && (this.topping === 'artichoke' || this.topping === 'anchovy')) {
-        price = price + ((sizePrice*1.3) - sizePrice)
-      }
-      if (this.topping === 'cheese' && this.topping === 'pepperoni' && this.topping === 'artichoke' && this.topping === 'anchovy') {
-        price = price + ((sizePrice*1.4) - sizePrice)
-      }
-    }
-    if (this.size === "large") {
-      price = price + ((sizePrice*1.5) - sizePrice)
-      if (this.topping === 'cheese' || this.topping === 'pepperoni' || this.topping === 'artichoke' || this.topping === 'anchovy') {
-        price = price + ((sizePrice*1.1) - sizePrice)
-      }
-      if (this.topping === 'cheese' && (this.topping === 'pepperoni' || this.topping === 'artichoke' || this.topping === 'anchovy')) {
-        price = price + ((sizePrice*1.2) - sizePrice)
-      }
-      if (this.topping === 'cheese' && this.topping === 'pepperoni' && (this.topping === 'artichoke' || this.topping === 'anchovy')) {
-        price = price + ((sizePrice*1.3) - sizePrice)
-      }
-      if (this.topping === 'cheese' && this.topping === 'pepperoni' && this.topping === 'artichoke' && this.topping === 'anchovy') {
-        price = price + ((sizePrice*1.4) - sizePrice)
-      }
-    }
-    if (this.size === 'extra-large') {
-      price = price + ((sizePrice*2.0) - sizePrice)
-      if (this.topping === 'cheese' || this.topping === 'pepperoni' || this.topping === 'artichoke' || this.topping === 'anchovy') {
-        price = price + ((sizePrice*1.1) - sizePrice)
-      }
-      if (this.topping === 'cheese' && (this.topping === 'pepperoni' || this.topping === 'artichoke' || this.topping === 'anchovy')) {
-        price = price + ((sizePrice*1.2) - sizePrice)
-      }
-      if (this.topping === 'cheese' && this.topping === 'pepperoni' && (this.topping === 'artichoke' || this.topping === 'anchovy')) {
-        price = price + ((sizePrice*1.3) - sizePrice)
-      }
-      if (this.topping === 'cheese' && this.topping === 'pepperoni' && this.topping === 'artichoke' && this.topping === 'anchovy') {
-        price = price + ((sizePrice*1.4) - sizePrice)
-      }
-    }
-    return price
   }
+  if (this.size === 'medium') {
+    price = sizePrice
+  }
+  if (this.size === "large") {
+    price = price + ((sizePrice*1.5) - sizePrice)
+  }
+  if (this.size === 'extra-large') {
+    price = price + ((sizePrice*2.0) - sizePrice)
+  }
+  console.log(price);
+  return price
 }
 // --------------------------- User interface logic ----------------------------
 $(document).ready(function() {
   $(".display").submit(function(event) {
     event.preventDefault();
     var size = $(".size").val()
+    console.log(size);
     var topping = $(".topping").val()
+    console.log(topping);
 
-    var price = new Pizza(size, topping);
-    var order = price.yourPrice();
+    var pizza = new Pizza(size, topping);
+    var price = pizza.yourPrice();
+    console.log(price);
 
     $("#show-task").show();
     $(".size").text(size);
     $(".topping").text(topping);
-    $("price").text(price);
+    $(".price").text(price);
   });
 });
