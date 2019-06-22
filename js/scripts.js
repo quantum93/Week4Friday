@@ -1,60 +1,75 @@
 // ------------------------------ business logic -------------------------------
-function Pizza(orderId, size, topping1, topping2) {
-  this.size = size;
-  this.topping1 = topping1;
-  this.topping2 = topping2;
-  // this.orderId = orderId
+function User(firstName, lastName, email) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.email = email;
 }
 
-Pizza.prototype.yourPrice = function() {
-  var pizzaSizes = {small:0.8, medium:1.0, large:1.5, extralarge:2.0}
-  var price, sizePrice;
-  price = sizePrice = 10; //basic price of all kinds of pizza
-  var toppingPrice = 3;
-  if (this.topping1 && this.topping2) {
-    toppingPrice = toppingPrice *2
-  } else {
-    toppingPrice = toppingPrice
-  }
+function Pizza(size, toppings) {
+  this.size = size;
+  this.toppings = toppings;
+}
+
+Pizza.prototype.sizePrice = function() {
+  var pizzaSizes = {'small':0.8, 'medium':1.0, 'large':1.5, 'extralarge':2.0};
+  var sizePrice = 10;
   if (this.size === 'small') {
-    sizePrice = sizePrice + ((sizePrice * pizzaSizes.small) - sizePrice)
-    toppingPrice = toppingPrice*(pizzaSizes.small)
+    sizePrice = sizePrice + ((sizePrice * pizzaSizes.small) - sizePrice);
   }
   if (this.size === 'medium') {
-    sizePrice = sizePrice*(pizzaSizes.medium)
-    toppingPrice = toppingPrice*(pizzaSizes.medium)
+    sizePrice = sizePrice + ((sizePrice * pizzaSizes.medium) - sizePrice);
   }
   if (this.size === "large") {
-    sizePrice = sizePrice + ((sizePrice*pizzaSizes.large) - sizePrice)
-    toppingPrice = toppingPrice*(pizzaSizes.large)
+    sizePrice = sizePrice + ((sizePrice*pizzaSizes.large) - sizePrice);
   }
   if (this.size === 'extralarge') {
-    sizePrice = sizePrice + ((sizePrice*pizzaSizes.extralarge) - sizePrice)
-    toppingPrice = toppingPrice*(pizzaSizes.extralarge)
+    sizePrice = sizePrice + ((sizePrice*pizzaSizes.extralarge) - sizePrice);
   }
+  return sizePrice;
+};
+
+Pizza.prototype.toppingPrice = function() {
+  var pizzatoppings = {'Cheese':0.8, 'Pepperoni':1.0, 'Artichoke':1.5, 'Anchovy':2.0};
+  var toppingPrice = 2;
+  if (this.topping1 && this.topping2) {
+    toppingPrice = toppingPrice *2;
+  } else {
+    toppingPrice = toppingPrice;
+  }
+  toppingPrice = toppingPrice*(pizzaSizes.small);
+  toppingPrice = toppingPrice*(pizzaSizes.medium);
+  toppingPrice = toppingPrice*(pizzaSizes.large);
+  toppingPrice = toppingPrice*(pizzaSizes.extralarge);
+};
+
+Pizza.prototype.yourPrice = function() {
   price = toppingPrice + sizePrice;
-  return price
-}
+  return price;
+};
 // --------------------------- User interface logic ----------------------------
 $(document).ready(function() {
   $(".display").submit(function(event) {
     event.preventDefault();
-    // var orderId = $("orderId").val();
+    var firstName = $("input").val();
+    var lastName = $("input").val();
+    var email = $("input").val();
     var size = $(".size").val();
-    var topping1 = $(".topping1").val();
-    var topping2 = $(".topping2").val();
-    console.log(topping2);
-    var pizza = new Pizza(size, topping1, topping2);
-    var price = pizza.yourPrice();
-
-    $(".hidden").show();
-    $(".order").append("Your pizza is " + size + " size " );
-    $(".order").append("with " + topping1);
-    if (topping2 === "") {
-        $(".order").append(" and you didn't choose a second topping.");
-    } else {
-      $(".order").append(" and " + topping2);
+    var toppings = [];
+    for (var i = 0; i < 4; i++) {
+      toppings[i] = $("input").val();
     }
-    $(".price").text(price);
+    console.log(toppings)
+    // var pizza = new Pizza(size, toppings);
+    // var price = pizza.yourPrice();
+    //
+    // $(".hidden").show();
+    // $(".order").append("Your pizza is " + size + " size " );
+    // $(".order").append("with " + topping1);
+    // if (topping2 === "") {
+    //     $(".order").append(" and you didn't choose a second topping.");
+    // } else {
+    //   $(".order").append(" and " + topping2);
+    // }
+    // $(".price").text(price);
   });
 });

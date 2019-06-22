@@ -25,8 +25,9 @@ Webpage that operates pizza order by size and topping choice.
 | add a logic of price with different number of topping choice             | medium, cheese      | medium, cheese, You didn't choose the second topping, 13     |
 | polishing order summary message                                          | medium, cheese | Your order details: Your pizza is small size with cheese and artichoke ~ |
 | make a click to store multiple pizza order using checkbox in html        |                                 |                                                  |
-
+| write new html style and rewrite js script with more object/method       |                                 |                                                  |
 | make new price logic for different choice of topping                     |                                 |                                                  |
+|
 
 
 
