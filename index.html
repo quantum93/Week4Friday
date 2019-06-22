@@ -11,6 +11,21 @@
   <h1>Welcome to the Epicodus Pizza</h1>
   <br>
   <form class="display">
+    <h2>Order Form</h2>
+    <br>
+    First name: <input type="text" name="firstname"><br/>
+    Last name: <input type="text" name="lastname"><br/>
+    Address:<input type="email" name="email"><br/>
+    <br>
+    <!-- <h2>The order of pizza</h2>
+    <select class="size">
+      <option value="first">first</option>
+      <option value="second">second</option>
+      <option value="third">third</option>
+      <option value="fourth">fourth</option>
+    </select> -->
+    <br>
+    <br>
     <h2>What size of pizza do you want?</h2>
     <select class="size">
       <option value="small">small</option>
@@ -21,21 +36,12 @@
     <br>
     <br>
     <h2>Here is the available topping in our pizza meneu</h2>
-    <h3>Please choose your second favorite topping</h3>
-    <select class="topping1">
-      <option value="cheese">cheese</option>
-      <option value="pepperoni">pepperoni</option>
-      <option value="artichoke">artichoke</option>
-      <option value="anchovy">anchovy</option>
-    </select>
-    <h3>Please choose your second favorite topping</h3>
-    <select class="topping2">
-      <option value=""></option>
-      <option value="cheese">cheese</option>
-      <option value="pepperoni">pepperoni</option>
-      <option value="artichoke">artichoke</option>
-      <option value="anchovy">anchovy</option>
-    </select>
+
+    <h4>Pizza toppings (Check all that apply)</h4>
+    <input type="checkbox" name="topping1" value="Cheese">Cheese
+    <input type="checkbox" name="topping2" value="Pepperoni">Pepperoni
+    <input type="checkbox" name="topping3" value="Artichoke">Artichoke
+    <input type="checkbox" name="topping1" value="Anchovy">Anchovy
     <br>
     <br>
     <button class="button" type="submit" id="display" name="button">Order Here</button>
