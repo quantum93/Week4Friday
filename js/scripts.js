@@ -39,8 +39,10 @@ $(document).ready(function() {
   $(".display").submit(function(event) {
     event.preventDefault();
     var size = $(".size").val();
-    var topping1 = $(".topping1").val();
-    var topping2 = $(".topping2").val();
+    var topping1 = $('#topping1').val();
+    console.log(topping1);
+    var topping2 = $('#topping2').val();
+    console.log(topping2);
     var pizza = new Pizza(size, topping1, topping2);
     var price = pizza.yourPrice();
 

@@ -27,6 +27,8 @@ Webpage that operates pizza order by size and topping choice.
 | display the result of price calculation on html                          | click order (small, artichoke)  | small, artichoke, 10.4                           |
 | fix price bug with takeout of orderId and                                | large, artichoke, cheese        | large, artichoke, cheese, 24                     |
 | change summary expression with .text()                                   | large, artichoke, cheese        | Your order details: Your pizza is large size ~   |
+| fix the problem of disable to check after 1st pizza toppings             | change class to id for topping1,2 | can select again after first pizza order       |
+
 
 
 ## Setup/Installation Requirements
