@@ -19,14 +19,14 @@ Webpage that operates pizza order by size and topping choice.
 | display the result of price calculation on html                          | click order (medium, artichoke) | medium, artichoke, 10                            |
 | make simpler logic for price calculation                                 | click order (medium, artichoke) | medium, artichoke, 13                            |
 | some css style jobs                                                      |                                 |                                                  |
-| add topping price variation with key-value                               | click order (medium, pepperoni) | medium, pepperoni, 19.5                          |
-| add multiple choice of topping                                           | medium, cheese, pepperoni       | medium, cheese, pepperoni, 19.5                  |
+| add topping price variation with key-value                               | click order (medium, pepperoni) | medium, pepperoni, 13                            |
+| add multiple choice of topping                                           | medium, cheese, pepperoni       | medium, cheese, pepperoni, 16                    |
 | add a logic of price with different number of topping choice             | medium, cheese, pepperoni       | medium, cheese, pepperoni, 16                    |
 | add a logic of price with different number of topping choice             | medium, cheese      | medium, cheese, You didn't choose the second topping, 13     |
 | polishing order summary message                                          | medium, cheese | Your order details: Your pizza is small size with cheese and artichoke ~ |
-| make a click to store multiple pizza order              |                                 |                |
-|
-
+| display the result of price calculation on html                          | click order (small, artichoke)  | small, artichoke, 10.4                           |
+| fix price bug with takeout of orderId and                                | large, artichoke, cheese        | large, artichoke, cheese, 24                     |
+| change summary expression with .text()                                   | large, artichoke, cheese        | Your order details: Your pizza is large size ~   |
 
 
 ## Setup/Installation Requirements
